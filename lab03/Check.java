@@ -50,6 +50,8 @@ dimes=(int)(costPerPerson*10)%10;
 //do the same for pennies
 pennies=(int)(costPerPerson*100)%10;
 //output amount owed by each diner
+double amount = dollars+dimes+pennies;
+System.out.printf("%.2f", amount);
 System.out.println("Each person in the group owes $"+dollars+'.'+(dimes+pennies));
     }
 }
