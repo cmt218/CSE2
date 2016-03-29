@@ -8,14 +8,14 @@ import java.util.Scanner;
 //define class 
 public class Rectangularize{
     
-public static void stringPrint(String word){        //method for printing word length amount of times
+public static void makeRectangle(String word){        //method for printing word length amount of times
     int length=word.length();                       //get length of word input
     for(int x=0;x<length;x++){                      //print the word on a new line the amount of times its length is
         System.out.println(word);                   //print the word
     }
 }
     
-public static void intPrint(int number){            //method for printing % symbol in a square defined by input
+public static void makeRectangle(int number){            //method for printing % symbol in a square defined by input
     int a=0;                                        //counter for while loop
     int y;                                          //variable for use inside for loop
     
@@ -38,10 +38,10 @@ Scanner userIn=new Scanner(System.in);
         
 System.out.println("Enter a word");                 //prompt user for word input
 String uWord=userIn.nextLine();                     //store word input
-stringPrint(uWord);                                 //run method with word input
+makeRectangle(uWord);                                 //run method with word input
 
 System.out.println("Enter a number");               //prompt user for number input
 int uInt=userIn.nextInt();                          //store number input
-intPrint(uInt);                                     //run method with number input
+makeRectangle(uInt);                                     //run method with number input
     }
 }
