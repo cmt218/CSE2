@@ -31,6 +31,37 @@ public static void Print(int[] list){                                           
 }
 
 
+//binary search method
+public static void Binary(int[] list,int search){                                                   //take array and int as input 
+    if(search < list[8]){                                                                           //see if input is in first half of array
+        for(int d=0;d<8;d++){                                                                       //search through first half
+            if(search == list[d]){                                                                  
+                System.out.println("The grade you entered was found in " +(d+1)+ " iterations");    //If search is a match say so as well as how many iterations and break loop
+                break;
+            }
+            if(d == 7){                                                                             //say if search grade was not found
+                System.out.println("Sorry the grade you entered was not found");
+            }
+        }
+    }
+    if(search >= list[8]){                                                                                              //see if input is in second half of array
+        for(int f=8;f<list.length;f++){                                                                                     //search through second half
+            if(search == list[f]){
+                System.out.println("The grade you entered was found in "+(f-7)+" iterations");                                          //if search was found say how many iterations it took and break loop
+                break;
+            }
+            if(f == list.length){                                                                               //if search wasn't found say so 
+                System.out.println("Sorry the grade you entered was not found");
+            }
+        }
+    }
+    
+}
+
+
+
+
+
 //linear search method
 public static void Search(int[] list,int search){                                                   //accept inputs for an int array as well as a value to search for
     for(int k=0;k<list.length;k++){                                                                 //run this loop for as many elements exist in the array
@@ -93,7 +124,9 @@ Print(grades);
 //prompt user for a grade to be searched for and conduct search
 System.out.println("Enter a grade to be searched for in the list");
 int choice = scan.nextInt();
-Search(grades,choice);
+
+
+Binary(grades,choice);              //binary search
 
 
 //display scrambled array
@@ -104,7 +137,7 @@ Print(grades);
 //prompt user for a new grade to be searched for and conduct search
 System.out.println("Enter a grade to be searched for in the scrambled list");
 choice = scan.nextInt();
-Search(grades,choice);
+Search(grades,choice);          //linear search 
 
 
     }
