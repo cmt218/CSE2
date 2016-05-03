@@ -7,16 +7,28 @@ import java.util.Scanner;
 
 public class practice{
     
-    public static void myMeth(double a, int b){
-        System.out.println(a);
-        System.out.println(b);
+    public static void printList(int[] Array){
+        for(int x=0;x<Array.length;x++){
+            System.out.println(Array[x]);
+        }
+    }
+    
+    public static void changeList(int[] Array){
+        Random ran = new Random();
+        for(int y=0;y<Array.length;y++){
+            Array[y]=ran.nextInt(10);
+        }
     }
     
     public static void main(String[] args){
     
-    double x=2.3;
+int one = 2;
+char letter = (char)(one + 'a');
+int two = Character.getNumericValue(letter);
+
+System.out.println(two);
+    
    
-    myMeth(3.0,x);
 
 }
 }
